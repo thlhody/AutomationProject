@@ -12,17 +12,27 @@ public class HomePage extends BasePage {
         super(webDriver);
     }
 
-    @FindBy(className = "fc-button-label")
-    private WebElement acceptCookies;
+    //@FindBy(className = "fc-button-label")
+    //private WebElement acceptCookies;
 
     @FindBy(xpath = "//h5[text()='Alerts, Frame & Windows']")
     private WebElement alertWindowFrameElem;
 
+    @FindBy(xpath = "//h5[text()='Forms']")
+    private WebElement practiceFormElement;
+
+
+
 
     public void navigateToAlertFrameWindowPage(){
-        elementMethods.clickElem(acceptCookies);
+        //elementMethods.clickElem(acceptCookies);
         elementMethods.clickElem(alertWindowFrameElem);
     }
+    public void navigateToFormsPage(){
+        elementMethods.clickElem(practiceFormElement);
+
+    }
+
 
 }
 

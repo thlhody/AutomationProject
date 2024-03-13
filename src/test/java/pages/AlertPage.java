@@ -16,19 +16,19 @@ public class AlertPage extends BasePage{
     private WebElement alertSimple;
 
     @FindBy(id = "timerAlertButton")
-    WebElement alertTimerComplex;
+    private WebElement alertTimerComplex;
 
     @FindBy(id = "promtButton")
-    WebElement promptSimple;
+    private WebElement promptSimple;
 
     @FindBy(id = "confirmButton")
-    WebElement confirmButton;
+    private WebElement confirmButton;
 
     @FindBy(id = "promptResult")
-    WebElement promptResult;
+    private WebElement promptResult;
 
     @FindBy(id = "confirmResult")
-    WebElement confirmResult;
+    private WebElement confirmResult;
 
     public void acceptAlert (){
         elementMethods.clickElem(alertSimple);
