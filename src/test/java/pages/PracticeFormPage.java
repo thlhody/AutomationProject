@@ -74,6 +74,13 @@ public class PracticeFormPage extends BasePage {
 
     @FindBy(id = "submit")
     private WebElement submitButton;
+
+    @FindBy(xpath = "//table/tbody/tr/td[1]")
+    private List<WebElement> rowsLabel;
+
+    @FindBy(xpath = "//table/tbody/tr/td[2]")
+    private List<WebElement> rowsValue;
+
     public void fillFirstName(String firstNameValue){
         elementMethods.fillString(firstNameField, firstNameValue);
     }
@@ -140,6 +147,51 @@ public class PracticeFormPage extends BasePage {
         } else {
             elementMethods.clickElem(other);
         }
+    }
+    public void validatePracticeForm(String firstNameValue, String lastNameValue, String emailValue, String genderValue,
+                                     String mobilValue, String dobDayValue, String dobMonthElem, String dobYearElem, String subjectValue,
+                                     List<String> hobbies, String filePath , String addressValue , String cityValue, String stateValue){
+
+//0 validate first name and last name
+        elementMethods.validateElementText(rowsLabel.get(0), "Student Name");
+        elementMethods.validateElementText(rowsValue.get(0), firstNameValue + " " + lastNameValue);
+//1 validate student email
+        elementMethods.validateElementText(rowsLabel.get(1), "Student Email");
+        elementMethods.validateElementText(rowsValue.get(1), emailValue);
+//2 validate gender
+        elementMethods.validateElementText(rowsLabel.get(2), "Gender");
+        elementMethods.validateElementText(rowsValue.get(2), genderValue);
+//3 validate mobile
+        elementMethods.validateElementText(rowsLabel.get(3), "Mobile");
+        elementMethods.validateElementText(rowsValue.get(3), mobilValue);
+//4 validate date of birth
+        String dobDayValueFormatted;
+        if (Integer.parseInt(dobDayValue) >= 1 && Integer.parseInt(dobDayValue) <= 9) {
+            dobDayValueFormatted = "0" + dobDayValue;
+        } else {
+            dobDayValueFormatted = dobDayValue;
+        }
+        elementMethods.validateElementText(rowsLabel.get(4), "Date of Birth");
+        elementMethods.validateElementText(rowsValue.get(4), dobDayValueFormatted + " " + dobMonthElem + "," + dobYearElem);
+//5 validate subjects
+        elementMethods.validateElementText(rowsLabel.get(5), "Subjects");
+        elementMethods.validateElementText(rowsValue.get(5), subjectValue);
+//6 validate hobbies
+        elementMethods.validateElementText(rowsLabel.get(6), "Hobbies");
+        for (String hobby : hobbies) {
+            elementMethods.validateElementTextSpecial(rowsValue.get(6),hobby);
+        }
+//7 validate picture
+        elementMethods.validateElementText(rowsLabel.get(7), "Picture");
+        String[] arrayFileName = filePath.split("/");
+        Integer desireIndex = arrayFileName.length - 1;
+        elementMethods.validateElementText(rowsValue.get(7),arrayFileName[desireIndex]);
+//8 validate address
+        elementMethods.validateElementText(rowsLabel.get(8), "Address");
+        elementMethods.validateElementText(rowsValue.get(8), addressValue);
+//9 validate state and city
+        elementMethods.validateElementText(rowsLabel.get(9), "State and City");
+        elementMethods.validateElementText(rowsValue.get(9), stateValue + " " + cityValue);
     }
 
 
