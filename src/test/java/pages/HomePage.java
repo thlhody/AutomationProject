@@ -25,9 +25,6 @@ public class HomePage extends BasePage {
     private WebElement elementFileElement;
 
 
-
-
-
     public void navigateToAlertFrameWindowPage(){
         //elementMethods.clickElem(acceptCookies);
         elementMethods.clickElem(alertWindowFrameElem);
