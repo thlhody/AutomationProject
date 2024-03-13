@@ -122,7 +122,6 @@ public class PracticeFormPage extends BasePage {
         elementMethods.fillString(subjectsField,subjectValue);
         elementMethods.fillKeys(subjectsField, Keys.ENTER);
     }
-
     public void fillState(String stateValue){
         elementMethods.scrollElemByPixel(0,450);
         elementMethods.clickElemForce(selectStateField);
@@ -134,11 +133,9 @@ public class PracticeFormPage extends BasePage {
         elementMethods.fillString(inputCityField,cityValue);
         elementMethods.fillKeys(inputCityField,Keys.ENTER);
     }
-
     public void submit(){
         elementMethods.clickElemForce(submitButton);
     }
-
     public void fillGender(String genderValue){
         if (Objects.equals(genderValue, "Male")) {
             elementMethods.clickElem(male);
@@ -194,5 +191,34 @@ public class PracticeFormPage extends BasePage {
         elementMethods.validateElementText(rowsValue.get(9), stateValue + " " + cityValue);
     }
 
-
+    public void fillEntireForm(String firstNameValue, String lastNameValue, String emailValue, String genderValue,
+                               String mobileValue, String dobDayValue, String dobMonthElem, String dobYearElem, String subjectValue,
+                               List<String> hobbies, String filePath , String addressValue , String cityValue, String stateValue){
+//first name 0.1
+        fillFirstName(firstNameValue);
+//last name 0.2
+        fillLastName(lastNameValue);
+//email 1
+        fillemail(emailValue);
+//gender 2
+        fillGender(genderValue);
+//mobile 3
+        fillmobile(mobileValue);
+//date of birth 4
+        fillDob(dobDayValue,dobMonthElem,dobYearElem);
+ //hobbies 5
+        pickHobbies(hobbies);
+//picture upload 6
+        pictureUpload(filePath);
+//address 7
+        fillAddress(addressValue);
+//subjects 8
+        fillSubjects(subjectValue);
+//state 9.1
+        fillState(stateValue);
+//city 9.2
+        fillCity(cityValue);
+//submit
+        submit();
+    }
 }

@@ -21,6 +21,10 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//h5[text()='Forms']")
     private WebElement practiceFormElement;
 
+    @FindBy(xpath = "//h5[text()='Elements']")
+    private WebElement elementFileElement;
+
+
 
 
 
@@ -31,6 +35,9 @@ public class HomePage extends BasePage {
     public void navigateToFormsPage(){
         elementMethods.clickElem(practiceFormElement);
 
+    }
+    public void navigateToElementPage(){
+        elementMethods.clickElem(elementFileElement);
     }
 
 
