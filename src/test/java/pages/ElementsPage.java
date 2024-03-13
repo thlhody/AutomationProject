@@ -9,12 +9,10 @@ public class ElementsPage extends BasePage{
     public ElementsPage(WebDriver webDriver){
         super(webDriver);
     }
-
     @FindBy(xpath ="//span[text()='Web Tables']")
     private WebElement webElementField;
 
     public void navigateToWebTablePage(){
         webElementField.click();
-
     }
 }

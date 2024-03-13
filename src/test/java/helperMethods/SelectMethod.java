@@ -9,6 +9,7 @@ public class SelectMethod {
     public SelectMethod (WebDriver webDriver){
         this.webDriver=webDriver;
     }
+
     public void selectObj(WebElement element, String text){
         Select selectObject = new Select(element);
         selectObject.selectByVisibleText(text);

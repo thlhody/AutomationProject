@@ -18,16 +18,11 @@ public class WindowTest extends SharedData {
         AlertWindowFramePage alertWindowFramePage = new AlertWindowFramePage(getWebDriver());
         alertWindowFramePage.navigateToBrowserWindowPage();
 //tab
-
         BrowserWindowsPage browserWindowsPage = new BrowserWindowsPage(getWebDriver());
         browserWindowsPage.interactWithNewTab();
-
 //window
-
         browserWindowsPage.intercatWithNewWindow();
-
 //window message
-
         browserWindowsPage.interactWithNewWindowMsgButton();
     }
 }

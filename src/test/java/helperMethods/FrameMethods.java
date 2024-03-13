@@ -7,9 +7,11 @@ public class FrameMethods {
     public FrameMethods(WebDriver webDriver){
         this.webDriver=webDriver;
     }
+
     public void switchSpecifcIframe(String value){
         webDriver.switchTo().frame(value);
     }
+
     public void switchParentFrame(){
         webDriver.switchTo().parentFrame();
     }

@@ -1,9 +1,5 @@
 package tests;
 
-import helperMethods.ElementMethods;
-import helperMethods.FrameMethods;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.AlertWindowFramePage;
 import pages.FramePage;
@@ -14,7 +10,6 @@ public class FramesTest extends SharedData {
 
     @Test
     public void metodaTest() {
-
         // intram pe pagina Browser window
         HomePage homePage = new HomePage(getWebDriver());
         homePage.navigateToAlertFrameWindowPage();
@@ -24,6 +19,5 @@ public class FramesTest extends SharedData {
 
         FramePage framePage = new FramePage(getWebDriver());
         framePage.dealWithIFrame();
-
     }
 }

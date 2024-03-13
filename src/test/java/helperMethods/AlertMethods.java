@@ -9,7 +9,6 @@ import java.time.Duration;
 
 public class AlertMethods {
     private WebDriver webDriver;
-
     public AlertMethods(WebDriver webDriver){
         this.webDriver=webDriver;
     }
@@ -25,7 +24,6 @@ public class AlertMethods {
     public void waitForAlert(){
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
-
     }
     public void fillAlert(String text){
         Alert promptAlert = webDriver.switchTo().alert();

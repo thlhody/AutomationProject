@@ -1,10 +1,5 @@
 package tests;
 
-import helperMethods.ElementMethods;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import pages.ElementsPage;
 import pages.HomePage;
@@ -12,7 +7,6 @@ import pages.WebTablePage;
 import sharedData.SharedData;
 
 public class WebTableTest extends SharedData {
-
     @Test
     public void metodaTest() {
 
@@ -39,6 +33,5 @@ public class WebTableTest extends SharedData {
         webTablePage.addNewEntry(firstNameValue,lastNameValue,emailValue,ageValue,salaryValue,departamentValue);
         webTablePage.editEntry(firstNameModifyValue,lastNameModifyValue,emailModifyValue,ageModifyValue,salaryModifyValue,departamentModifyValue);
         webTablePage.deleteEntry();
-
     }
 }

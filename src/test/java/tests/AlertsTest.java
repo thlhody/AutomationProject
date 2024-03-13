@@ -1,8 +1,6 @@
 package tests;
 
-import helperMethods.AlertMethods;
 import helperMethods.ElementMethods;
-import org.openqa.selenium.*;
 import org.testng.annotations.Test;
 import pages.AlertPage;
 import pages.AlertWindowFramePage;

@@ -1,13 +1,11 @@
 package pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +13,6 @@ public class PracticeFormPage extends BasePage {
     public PracticeFormPage(WebDriver webDriver) {
         super(webDriver);
     }
-
     @FindBy(css = "input[placeholder='First Name']")
     private WebElement firstNameField;
 
@@ -27,8 +24,10 @@ public class PracticeFormPage extends BasePage {
 
     @FindBy(css = "label[for='gender-radio-1']")
     private WebElement male;
+
     @FindBy(css = "label[for='gender-radio-2']")
     private WebElement female;
+
     @FindBy(css = "label[for='gender-radio-3']")
     private WebElement other;
 
@@ -87,10 +86,10 @@ public class PracticeFormPage extends BasePage {
     public void fillLastName(String lastNameValue){
         elementMethods.fillString(lastNameField, lastNameValue);
     }
-    public void fillemail(String emailValue){
+    public void fillEmail(String emailValue){
         elementMethods.fillString(emailField, emailValue);
     }
-    public void fillmobile(String mobileValue){
+    public void fillMobile(String mobileValue){
         elementMethods.fillString(mobileField, mobileValue);
     }
     public void fillDob(String dobDayValue,String dobMonthValue,String dobYearValue){
@@ -133,9 +132,6 @@ public class PracticeFormPage extends BasePage {
         elementMethods.fillString(inputCityField,cityValue);
         elementMethods.fillKeys(inputCityField,Keys.ENTER);
     }
-    public void submit(){
-        elementMethods.clickElemForce(submitButton);
-    }
     public void fillGender(String genderValue){
         if (Objects.equals(genderValue, "Male")) {
             elementMethods.clickElem(male);
@@ -144,6 +140,9 @@ public class PracticeFormPage extends BasePage {
         } else {
             elementMethods.clickElem(other);
         }
+    }
+    public void submit(){
+        elementMethods.clickElemForce(submitButton);
     }
     public void validatePracticeForm(String firstNameValue, String lastNameValue, String emailValue, String genderValue,
                                      String mobilValue, String dobDayValue, String dobMonthElem, String dobYearElem, String subjectValue,
@@ -199,11 +198,11 @@ public class PracticeFormPage extends BasePage {
 //last name 0.2
         fillLastName(lastNameValue);
 //email 1
-        fillemail(emailValue);
+        fillEmail(emailValue);
 //gender 2
         fillGender(genderValue);
 //mobile 3
-        fillmobile(mobileValue);
+        fillMobile(mobileValue);
 //date of birth 4
         fillDob(dobDayValue,dobMonthElem,dobYearElem);
  //hobbies 5

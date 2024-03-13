@@ -14,5 +14,4 @@ public class FormsPage extends BasePage{
     public void navigateToPracticeForm(){
         elementMethods.clickElem(practiceFormElem);
     }
-
 }

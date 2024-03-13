@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
-    public ElementMethods elementMethods;
     public WebDriver webDriver;
+    public ElementMethods elementMethods;
     public AlertMethods alertMethods;
     public FrameMethods frameMethods;
     public SelectMethod selectMethod;
@@ -20,7 +20,5 @@ public class BasePage {
         selectMethod = new SelectMethod(webDriver);
         windowMethod = new WindowMethod(webDriver);
         PageFactory.initElements(webDriver,this);
-
-
     }
 }
