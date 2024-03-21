@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pages.AlertPage;
 import pages.AlertWindowFramePage;
 import pages.HomePage;
-import sharedData.SharedData;
+import shared.data.SharedData;
 
 public class AlertsTest extends SharedData {
 

@@ -4,7 +4,8 @@ import org.testng.annotations.Test;
 import pages.FormsPage;
 import pages.HomePage;
 import pages.PracticeFormPage;
-import sharedData.SharedData;
+import shared.data.SharedData;
+
 import java.util.*;
 
 public class PracticeFormTest extends SharedData {
@@ -18,7 +19,7 @@ public class PracticeFormTest extends SharedData {
         FormsPage formsPage = new FormsPage(getWebDriver());
         formsPage.navigateToPracticeForm();
 
-        PracticeFormPage practiceFormPage =new PracticeFormPage(getWebDriver());
+        PracticeFormPage practiceFormPage = new PracticeFormPage(getWebDriver());
 //first name 0.1
         String firstNameValue = "Tudor";
 //last name 0.2
@@ -64,13 +65,13 @@ public class PracticeFormTest extends SharedData {
 //        practiceFormPage.submit();
 
 //fill entire form
-        practiceFormPage.fillEntireForm(firstNameValue,lastNameValue,emailValue,genderValue,mobileValue,dobDayValue,
-                dobMonthValue,dobYearValue,subjectValue,hobbies,filePath,addressValue,cityValue,stateValue);
+        practiceFormPage.fillEntireForm(firstNameValue, lastNameValue, emailValue, genderValue, mobileValue, dobDayValue,
+                dobMonthValue, dobYearValue, subjectValue, hobbies, filePath, addressValue, cityValue, stateValue);
 //assert validari
 
         //xpath : //table/tbody/tr/td[1] - dintre 2 frati cu aceelasi nume(tr) incep de la 1 primu 2 al doilea ....etc
         //validam tabelul cu valori
-        practiceFormPage.validatePracticeForm(firstNameValue,lastNameValue,emailValue,genderValue,mobileValue,dobDayValue,
-                dobMonthValue,dobYearValue,subjectValue,hobbies,filePath,addressValue,cityValue,stateValue);
+        practiceFormPage.validatePracticeForm(firstNameValue, lastNameValue, emailValue, genderValue, mobileValue, dobDayValue,
+                dobMonthValue, dobYearValue, subjectValue, hobbies, filePath, addressValue, cityValue, stateValue);
     }
 }
