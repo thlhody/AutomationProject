@@ -23,6 +23,7 @@ public class WebTableTest extends SharedData {
         webTablePage.addNewEntry(webTableObject);
         webTableObject.setFirstNameValue("Bogdan");
         webTableObject.setLastNameValue("Georgel");
+        webTableObject.setDepartamentValue("IT Serios");
         webTablePage.editEntry(webTableObject);
         webTablePage.deleteEntry();
     }
