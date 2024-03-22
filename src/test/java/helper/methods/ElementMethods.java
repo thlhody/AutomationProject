@@ -1,4 +1,4 @@
-package helperMethods;
+package helper.methods;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;

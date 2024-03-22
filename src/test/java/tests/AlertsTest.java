@@ -1,6 +1,6 @@
 package tests;
 
-import helperMethods.ElementMethods;
+import helper.methods.ElementMethods;
 import org.testng.annotations.Test;
 import pages.AlertPage;
 import pages.AlertWindowFramePage;
