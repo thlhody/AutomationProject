@@ -8,6 +8,7 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver webDriver) {
         super(webDriver);
     }
+    
     //@FindBy(className = "fc-button-label")
     //private WebElement acceptCookies;
 
