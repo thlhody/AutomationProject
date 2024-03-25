@@ -1,6 +1,7 @@
 package pages;
 
 
+import object.data.PracticeFormObject;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -144,79 +145,79 @@ public class PracticeFormPage extends BasePage {
     public void submit(){
         elementMethods.clickElemForce(submitButton);
     }
-    public void validatePracticeForm(String firstNameValue, String lastNameValue, String emailValue, String genderValue,
-                                     String mobilValue, String dobDayValue, String dobMonthElem, String dobYearElem, String subjectValue,
-                                     List<String> hobbies, String filePath , String addressValue , String cityValue, String stateValue){
+    public void validatePracticeForm(PracticeFormObject practiceFormObject){
 
 //0 validate first name and last name
         elementMethods.validateElementText(rowsLabel.get(0), "Student Name");
-        elementMethods.validateElementText(rowsValue.get(0), firstNameValue + " " + lastNameValue);
+        elementMethods.validateElementText(rowsValue.get(0), practiceFormObject.getFirstNameValue() + " "
+                + practiceFormObject.getLastNameValue());
 //1 validate student email
         elementMethods.validateElementText(rowsLabel.get(1), "Student Email");
-        elementMethods.validateElementText(rowsValue.get(1), emailValue);
+        elementMethods.validateElementText(rowsValue.get(1), practiceFormObject.getEmailValue());
 //2 validate gender
         elementMethods.validateElementText(rowsLabel.get(2), "Gender");
-        elementMethods.validateElementText(rowsValue.get(2), genderValue);
+        elementMethods.validateElementText(rowsValue.get(2), practiceFormObject.getGenderValue());
 //3 validate mobile
         elementMethods.validateElementText(rowsLabel.get(3), "Mobile");
-        elementMethods.validateElementText(rowsValue.get(3), mobilValue);
+        elementMethods.validateElementText(rowsValue.get(3), practiceFormObject.getMobilValue());
 //4 validate date of birth
         String dobDayValueFormatted;
-        if (Integer.parseInt(dobDayValue) >= 1 && Integer.parseInt(dobDayValue) <= 9) {
-            dobDayValueFormatted = "0" + dobDayValue;
+        if (Integer.parseInt(practiceFormObject.getDobDayValue()) >= 1 && Integer.parseInt(practiceFormObject.getDobDayValue()) <= 9) {
+            dobDayValueFormatted = "0" + practiceFormObject.getDobDayValue();
         } else {
-            dobDayValueFormatted = dobDayValue;
+            dobDayValueFormatted = practiceFormObject.getDobDayValue();
         }
         elementMethods.validateElementText(rowsLabel.get(4), "Date of Birth");
-        elementMethods.validateElementText(rowsValue.get(4), dobDayValueFormatted + " " + dobMonthElem + "," + dobYearElem);
+        elementMethods.validateElementText(rowsValue.get(4), dobDayValueFormatted + " " + practiceFormObject.getDobMonthValue() + ","
+                + practiceFormObject.getDobYearValue());
 //5 validate subjects
         elementMethods.validateElementText(rowsLabel.get(5), "Subjects");
-        elementMethods.validateElementText(rowsValue.get(5), subjectValue);
+        elementMethods.validateElementText(rowsValue.get(5), practiceFormObject.getSubjectValue());
 //6 validate hobbies
         elementMethods.validateElementText(rowsLabel.get(6), "Hobbies");
-        for (String hobby : hobbies) {
+        for (String hobby : practiceFormObject.getHobbies()) {
             elementMethods.validateElementTextSpecial(rowsValue.get(6),hobby);
         }
 //7 validate picture
         elementMethods.validateElementText(rowsLabel.get(7), "Picture");
-        String[] arrayFileName = filePath.split("/");
+        String[] arrayFileName = practiceFormObject.getFilePath().split("/");
         Integer desireIndex = arrayFileName.length - 1;
         elementMethods.validateElementText(rowsValue.get(7),arrayFileName[desireIndex]);
 //8 validate address
         elementMethods.validateElementText(rowsLabel.get(8), "Address");
-        elementMethods.validateElementText(rowsValue.get(8), addressValue);
+        elementMethods.validateElementText(rowsValue.get(8), practiceFormObject.getAddressValue());
 //9 validate state and city
         elementMethods.validateElementText(rowsLabel.get(9), "State and City");
-        elementMethods.validateElementText(rowsValue.get(9), stateValue + " " + cityValue);
+        elementMethods.validateElementText(rowsValue.get(9), practiceFormObject.getStateValue() + " " + practiceFormObject.getCityValue());
     }
 
-    public void fillEntireForm(String firstNameValue, String lastNameValue, String emailValue, String genderValue,
-                               String mobileValue, String dobDayValue, String dobMonthElem, String dobYearElem, String subjectValue,
-                               List<String> hobbies, String filePath , String addressValue , String cityValue, String stateValue){
+    public void fillEntireForm(PracticeFormObject practiceFormObject){
+
 //first name 0.1
-        fillFirstName(firstNameValue);
+        fillFirstName(practiceFormObject.getFirstNameValue());
 //last name 0.2
-        fillLastName(lastNameValue);
+        fillLastName(practiceFormObject.getLastNameValue());
 //email 1
-        fillEmail(emailValue);
+        fillEmail(practiceFormObject.getEmailValue());
 //gender 2
-        fillGender(genderValue);
+        fillGender(practiceFormObject.getGenderValue());
 //mobile 3
-        fillMobile(mobileValue);
+        fillMobile(practiceFormObject.getMobilValue());
 //date of birth 4
-        fillDob(dobDayValue,dobMonthElem,dobYearElem);
+        fillDob(practiceFormObject.getDobDayValue(), practiceFormObject.getDobMonthValue(),
+                practiceFormObject.getDobYearValue());
  //hobbies 5
-        pickHobbies(hobbies);
+        pickHobbies(practiceFormObject.getHobbies());
 //picture upload 6
-        pictureUpload(filePath);
+        pictureUpload(practiceFormObject.getFilePath());
 //address 7
-        fillAddress(addressValue);
+        fillAddress(practiceFormObject.getAddressValue());
 //subjects 8
-        fillSubjects(subjectValue);
+        fillSubjects(practiceFormObject.getSubjectValue());
 //state 9.1
-        fillState(stateValue);
+        fillState(practiceFormObject.getStateValue());
 //city 9.2
-        fillCity(cityValue);
+        fillCity(practiceFormObject.getCityValue());
 //submit
         submit();
     }

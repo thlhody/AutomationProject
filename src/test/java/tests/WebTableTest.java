@@ -26,6 +26,5 @@ public class WebTableTest extends SharedData {
         webTableObject.setDepartamentValue("IT Serios");
         webTablePage.editEntry(webTableObject);
         webTablePage.deleteEntry();
-
     }
 }
