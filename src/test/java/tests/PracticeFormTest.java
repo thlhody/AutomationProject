@@ -1,7 +1,6 @@
 package tests;
 
 import object.data.PracticeFormObject;
-import object.data.WebTableObject;
 import org.testng.annotations.Test;
 import pages.FormsPage;
 import pages.HomePage;
@@ -9,7 +8,6 @@ import pages.PracticeFormPage;
 import property.utility.PropertyUtility;
 import shared.data.SharedData;
 
-import java.util.*;
 
 public class PracticeFormTest extends SharedData {
 
