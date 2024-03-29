@@ -15,11 +15,12 @@ public class WebTableTest extends SharedData {
         PropertyUtility propertyUtility = new PropertyUtility("webTableData");
         WebTableObject webTableObject = new WebTableObject(propertyUtility.getAllData());
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.navigateToElementPage();
         ElementsPage elementsPage = new ElementsPage(getWebDriver());
+        WebTablePage webTablePage = new WebTablePage(getWebDriver());
+
+        homePage.navigateToElementPage();
         elementsPage.navigateToWebTablePage();
 
-        WebTablePage webTablePage = new WebTablePage(getWebDriver());
         webTablePage.addNewEntry(webTableObject);
         webTableObject.setFirstNameValue("Bogdan");
         webTableObject.setLastNameValue("Georgel");

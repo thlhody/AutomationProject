@@ -9,23 +9,28 @@ import java.time.Duration;
 
 public class AlertMethods {
     private WebDriver webDriver;
-    public AlertMethods(WebDriver webDriver){
-        this.webDriver=webDriver;
+
+    public AlertMethods(WebDriver webDriver) {
+        this.webDriver = webDriver;
     }
-    public void acceptAlert(){
+
+    public void acceptAlert() {
         waitForAlert();
         Alert secondAlert = webDriver.switchTo().alert();
         secondAlert.accept();
     }
-    public void dismissAlert(){
+
+    public void dismissAlert() {
         Alert secondAlert = webDriver.switchTo().alert();
         secondAlert.dismiss();
     }
-    public void waitForAlert(){
+
+    public void waitForAlert() {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
     }
-    public void fillAlert(String text){
+
+    public void fillAlert(String text) {
         Alert promptAlert = webDriver.switchTo().alert();
         promptAlert.sendKeys(text);
         promptAlert.accept();

@@ -12,16 +12,12 @@ public class AlertsTest extends SharedData {
     @Test
     public void metodaTest() {
 
-        ElementMethods elementMethods = new ElementMethods(getWebDriver());
-
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.navigateToAlertFrameWindowPage();
-
         AlertWindowFramePage alertWindowFramePage = new AlertWindowFramePage(getWebDriver());
-        alertWindowFramePage.navigateToAlertPage();
-
-        elementMethods.scrollElemByPixel(0, 450);
         AlertPage alertPage = new AlertPage(getWebDriver());
+
+        homePage.navigateToAlertFrameWindowPage();
+        alertWindowFramePage.navigateToAlertPage();
 
 //1 button normal
         alertPage.acceptAlert();

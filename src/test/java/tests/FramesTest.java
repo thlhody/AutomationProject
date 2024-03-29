@@ -10,7 +10,7 @@ public class FramesTest extends SharedData {
 
     @Test
     public void metodaTest() {
-        // intram pe pagina Browser window
+
         HomePage homePage = new HomePage(getWebDriver());
         homePage.navigateToAlertFrameWindowPage();
 

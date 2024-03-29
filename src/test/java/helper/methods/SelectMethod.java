@@ -6,11 +6,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SelectMethod {
     private WebDriver webDriver;
-    public SelectMethod (WebDriver webDriver){
-        this.webDriver=webDriver;
+
+    public SelectMethod(WebDriver webDriver) {
+        this.webDriver = webDriver;
     }
 
-    public void selectObj(WebElement element, String text){
+    public void selectObj(WebElement element, String text) {
         Select selectObject = new Select(element);
         selectObject.selectByVisibleText(text);
     }

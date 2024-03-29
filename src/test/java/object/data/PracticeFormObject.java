@@ -22,6 +22,7 @@ public class PracticeFormObject extends GeneralObject {
     public PracticeFormObject(Map<String, String> testData) {
         prepareObject(testData);
     }
+
     private void prepareObject(Map<String, String> testData) {
         for (String key : testData.keySet()) {
             switch (key) {

@@ -15,15 +15,12 @@ public class PracticeFormTest extends SharedData {
     public void metodaTest() {
         PropertyUtility propertyUtility = new PropertyUtility("practiceFormData");
         PracticeFormObject practiceFormObject = new PracticeFormObject(propertyUtility.getAllData());
-
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.navigateToFormsPage();
-
         FormsPage formsPage = new FormsPage(getWebDriver());
-        formsPage.navigateToPracticeForm();
-
         PracticeFormPage practiceFormPage = new PracticeFormPage(getWebDriver());
 
+        homePage.navigateToFormsPage();
+        formsPage.navigateToPracticeForm();
 //fill entire form
         practiceFormPage.fillEntireForm(practiceFormObject);
 //assert validari

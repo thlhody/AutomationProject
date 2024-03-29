@@ -13,12 +13,12 @@ public class WindowTest extends SharedData {
     public void metodaTest() {
 
         HomePage homePage = new HomePage(getWebDriver());
-        homePage.navigateToAlertFrameWindowPage();
-
         AlertWindowFramePage alertWindowFramePage = new AlertWindowFramePage(getWebDriver());
+        BrowserWindowsPage browserWindowsPage = new BrowserWindowsPage(getWebDriver());
+
+        homePage.navigateToAlertFrameWindowPage();
         alertWindowFramePage.navigateToBrowserWindowPage();
 //tab
-        BrowserWindowsPage browserWindowsPage = new BrowserWindowsPage(getWebDriver());
         browserWindowsPage.interactWithNewTab();
 //window
         browserWindowsPage.intercatWithNewWindow();

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class GeneralObject {
 
-    public List<String> getPreparedValue(String value) {
+    public List<String> getPreparedValue(String text) {
         List<String> result = new ArrayList<>();
-        String[] valueSplit = value.split(",");
+        String[] valueSplit = text.split(",");
         for (int i = 0; i < valueSplit.length; i++) {
             result.add(valueSplit[i]);
         }

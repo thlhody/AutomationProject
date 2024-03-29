@@ -10,9 +10,6 @@ public class WebTableObject {
     private String salaryValue;
     private String departamentValue;
 
-
-    //facem o metoda care sa mapeze datele din fisierul de resurse cu reprezentarea acestui obiect;
-
     public WebTableObject(Map<String, String> testData) {
         prepareObject(testData);
 

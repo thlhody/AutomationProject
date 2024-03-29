@@ -13,13 +13,13 @@ public class BasePage {
     public SelectMethod selectMethod;
     public WindowMethod windowMethod;
 
-    public BasePage(WebDriver webDriver){
+    public BasePage(WebDriver webDriver) {
         this.webDriver = webDriver;
         elementMethods = new ElementMethods(webDriver);
         alertMethods = new AlertMethods(webDriver);
         frameMethods = new FrameMethods(webDriver);
         selectMethod = new SelectMethod(webDriver);
         windowMethod = new WindowMethod(webDriver);
-        PageFactory.initElements(webDriver,this);
+        PageFactory.initElements(webDriver, this);
     }
 }

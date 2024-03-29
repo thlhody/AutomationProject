@@ -4,13 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import java.time.Duration;
 
 public class SharedData {
     private WebDriver webDriver;
 
     @BeforeMethod
-    public void prepareDriver(){
+    public void prepareDriver() {
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.get("https://demoqa.com");
@@ -23,7 +24,7 @@ public class SharedData {
     }
 
     @AfterMethod
-    public void clearData(){
+    public void clearData() {
         webDriver.quit();
     }
 }
