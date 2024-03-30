@@ -1,10 +1,11 @@
 package tests;
 
-import helper.methods.ElementMethods;
+import object.data.AlertObject;
 import org.testng.annotations.Test;
 import pages.AlertPage;
 import pages.AlertWindowFramePage;
 import pages.HomePage;
+import property.utility.PropertyUtility;
 import shared.data.SharedData;
 
 public class AlertsTest extends SharedData {
@@ -15,6 +16,8 @@ public class AlertsTest extends SharedData {
         HomePage homePage = new HomePage(getWebDriver());
         AlertWindowFramePage alertWindowFramePage = new AlertWindowFramePage(getWebDriver());
         AlertPage alertPage = new AlertPage(getWebDriver());
+        PropertyUtility propertyUtility = new PropertyUtility("alertData");
+        AlertObject alertObject = new AlertObject(propertyUtility.getAllData());
 
         homePage.navigateToAlertFrameWindowPage();
         alertWindowFramePage.navigateToAlertPage();
@@ -25,7 +28,7 @@ public class AlertsTest extends SharedData {
         alertPage.alertTimerComplex();
 //4 prompt and text button and validates
         //tema
-        alertPage.promptSimple("sarmale");
+        alertPage.promptSimple(alertObject.getInputText());
 //3 confirm decline button and validates
         alertPage.cancelAlert();
     }
