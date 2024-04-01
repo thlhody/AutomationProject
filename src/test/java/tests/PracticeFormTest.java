@@ -15,6 +15,7 @@ public class PracticeFormTest extends SharedData {
     public void metodaTest() {
         HomePage homePage = new HomePage(getWebDriver());
         FormsPage formsPage = new FormsPage(getWebDriver());
+        ///ds
         PracticeFormPage practiceFormPage = new PracticeFormPage(getWebDriver());
         PropertyUtility propertyUtility = new PropertyUtility("practiceFormData");
         PracticeFormObject practiceFormObject = new PracticeFormObject(propertyUtility.getAllData());
