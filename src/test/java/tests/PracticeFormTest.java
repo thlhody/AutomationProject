@@ -1,12 +1,12 @@
 package tests;
 
-import object.data.PracticeFormObject;
+import objectData.PracticeFormObject;
 import org.testng.annotations.Test;
 import pages.FormsPage;
 import pages.HomePage;
 import pages.PracticeFormPage;
-import property.utility.PropertyUtility;
-import shared.data.SharedData;
+import propertyUtility.PropertyUtility;
+import sharedData.SharedData;
 
 
 public class PracticeFormTest extends SharedData {

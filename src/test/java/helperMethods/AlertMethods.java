@@ -1,4 +1,4 @@
-package helper.methods;
+package helperMethods;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;

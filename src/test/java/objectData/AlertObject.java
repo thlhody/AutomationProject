@@ -1,4 +1,4 @@
-package object.data;
+package objectData;
 
 import java.util.Map;
 

@@ -1,12 +1,12 @@
 package tests;
 
-import object.data.AlertObject;
+import objectData.AlertObject;
 import org.testng.annotations.Test;
 import pages.AlertPage;
 import pages.AlertWindowFramePage;
 import pages.HomePage;
-import property.utility.PropertyUtility;
-import shared.data.SharedData;
+import propertyUtility.PropertyUtility;
+import sharedData.SharedData;
 
 public class AlertsTest extends SharedData {
 

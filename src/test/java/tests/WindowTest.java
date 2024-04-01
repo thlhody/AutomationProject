@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import pages.AlertWindowFramePage;
 import pages.BrowserWindowsPage;
 import pages.HomePage;
-import shared.data.SharedData;
+import sharedData.SharedData;
 
 
 public class WindowTest extends SharedData {

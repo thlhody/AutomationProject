@@ -1,4 +1,4 @@
-package property.utility;
+package propertyUtility;
 
 import java.io.FileInputStream;
 import java.util.HashMap;

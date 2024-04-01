@@ -1,12 +1,12 @@
 package tests;
 
-import object.data.WebTableObject;
+import objectData.WebTableObject;
 import org.testng.annotations.Test;
 import pages.ElementsPage;
 import pages.HomePage;
 import pages.WebTablePage;
-import property.utility.PropertyUtility;
-import shared.data.SharedData;
+import propertyUtility.PropertyUtility;
+import sharedData.SharedData;
 
 public class WebTableTest extends SharedData {
     @Test
