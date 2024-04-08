@@ -1,5 +1,6 @@
 package pages;
 
+import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,6 +18,7 @@ public class AlertWindowFramePage extends BasePage {
     private WebElement browserWindows;
 
     public void navigateToAlertPage() {
+
         elementMethods.clickElem(alertsElem);
     }
 

@@ -6,9 +6,10 @@ import pages.AlertPage;
 import pages.AlertWindowFramePage;
 import pages.HomePage;
 import propertyUtility.PropertyUtility;
-import sharedData.SharedData;
+import sharedData.Hooks;
 
-public class AlertsTest extends SharedData {
+
+public class AlertsTest extends Hooks {
 
     @Test
     public void metodaTest() {

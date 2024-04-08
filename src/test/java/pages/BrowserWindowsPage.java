@@ -1,5 +1,6 @@
 package pages;
 
+import loggerUtility.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,25 +20,37 @@ public class BrowserWindowsPage extends HomePage {
     public void interactWithNewTab() {
 
         elementMethods.clickElem(newTabButton);
+        LoggerUtility.infoTest("The user clicks on new tab button");
         windowMethod.switchSpecificTabWindow(1);//sample window
+        LoggerUtility.infoTest("The user switches to a tab  index 1");
         windowMethod.closeCurrentTabWindow();
+        LoggerUtility.infoTest("The user closes tab");
         windowMethod.switchSpecificTabWindow(0);//browser window
+        LoggerUtility.infoTest("The user switches to a tab  index 0");
     }
 
     public void intercatWithNewWindow() {
 
         elementMethods.clickElem(newWindowButton);
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
         windowMethod.switchSpecificTabWindow(1);//sample window
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
         windowMethod.closeCurrentTabWindow();
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
         windowMethod.switchSpecificTabWindow(0);//browser window
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
     }
 
     public void interactWithNewWindowMsgButton() {
 
         elementMethods.clickElem(newWindowMsgButton);
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
         windowMethod.switchSpecificTabWindow(1);//sample window
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
         windowMethod.closeCurrentTabWindow();
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
         windowMethod.switchSpecificTabWindow(0);//browser window
+        LoggerUtility.infoTest("The user switches to a tab with index 1");
     }
 }
 

@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 import pages.AlertWindowFramePage;
 import pages.BrowserWindowsPage;
 import pages.HomePage;
-import sharedData.SharedData;
+import sharedData.Hooks;
 
 
-public class WindowTest extends SharedData {
+public class WindowTest extends Hooks {
 
     @Test
     public void metodaTest() {
