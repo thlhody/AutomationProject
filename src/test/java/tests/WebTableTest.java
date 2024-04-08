@@ -8,7 +8,7 @@ import pages.WebTablePage;
 import propertyUtility.PropertyUtility;
 import sharedData.SharedData;
 
-public class WebTableTest extends SharedData {
+public class WebTableTest extends Hooks {
     @Test
     public void metodaTest() {
 

@@ -9,7 +9,7 @@ import propertyUtility.PropertyUtility;
 import sharedData.SharedData;
 
 
-public class PracticeFormTest extends SharedData {
+public class PracticeFormTest extends Hooks {
 
     @Test
     public void metodaTest() {
