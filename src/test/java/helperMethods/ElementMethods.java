@@ -51,6 +51,7 @@ public class ElementMethods {
 
     public void fillString(WebElement element, String text) {
         element.sendKeys(text);
+
     }
 
     public void fillKeys(WebElement element, Keys key) {

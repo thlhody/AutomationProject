@@ -34,17 +34,17 @@ public class AlertPage extends BasePage {
     public void cancelAlert() {
 
         elementMethods.clickElem(confirmButton);
-        LoggerUtility.infoTest("User Click Alert Ok/Cancel");
+        LoggerUtility.infoTest("User clicks Alert Ok/Cancel");
         alertMethods.dismissAlert();
         LoggerUtility.infoTest("User Alert Cancel Selected");
         elementMethods.validateElementText(confirmResult, "You selected Cancel");
-        LoggerUtility.infoTest("User Validate Alert Cancel");
+        LoggerUtility.infoTest("User Validates Alert Cancel");
     }
 
     public void alertTimerComplex() {
 
         elementMethods.clickElemForce(alertTimerComplex);
-        LoggerUtility.infoTest("User Click Alert Timer");
+        LoggerUtility.infoTest("User clicks Alert Timer");
         alertMethods.acceptAlert();
         LoggerUtility.infoTest("User Accept Alert");
     }
@@ -52,10 +52,10 @@ public class AlertPage extends BasePage {
     public void promptSimple(String text) {
 
         elementMethods.clickElem(promptSimple);
-        LoggerUtility.infoTest("User Click Alert Prompt");
+        LoggerUtility.infoTest("User clicks Alert Prompt");
         alertMethods.fillAlert(text);
         LoggerUtility.infoTest("User Entered Alert: "+text);
         elementMethods.validateElementText(promptResult, "You entered " + text);
-        LoggerUtility.infoTest("User Validate Prompt Alert: "+text);
+        LoggerUtility.infoTest("User Validates Prompt Alert: "+text);
     }
 }

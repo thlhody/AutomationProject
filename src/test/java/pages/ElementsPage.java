@@ -16,6 +16,6 @@ public class ElementsPage extends BasePage {
 
     public void navigateToWebTablePage() {
         webElementField.click();
-        LoggerUtility.infoTest("User Navigate to Web Table Page");
+        LoggerUtility.infoTest("User navigates to Web Table Page");
     }
 }
