@@ -6,7 +6,7 @@ import pages.ElementsPage;
 import pages.HomePage;
 import pages.WebTablePage;
 import propertyUtility.PropertyUtility;
-import sharedData.SharedData;
+import sharedData.Hooks;
 
 public class WebTableTest extends Hooks {
     @Test

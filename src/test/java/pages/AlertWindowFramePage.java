@@ -20,14 +20,17 @@ public class AlertWindowFramePage extends BasePage {
     public void navigateToAlertPage() {
 
         elementMethods.clickElem(alertsElem);
+        LoggerUtility.infoTest("User Navigate to Alerts Page");
     }
 
     public void navigateToFramePage() {
         elementMethods.clickElem(framesElem);
+        LoggerUtility.infoTest("User Navigate to Frames Page");
     }
 
     public void navigateToBrowserWindowPage() {
         elementMethods.clickElem(browserWindows);
+        LoggerUtility.infoTest("User Navigate to Browser window Page");
     }
 
 }

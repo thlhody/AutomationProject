@@ -32,25 +32,25 @@ public class BrowserWindowsPage extends HomePage {
     public void intercatWithNewWindow() {
 
         elementMethods.clickElem(newWindowButton);
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user clicks on new window button");
         windowMethod.switchSpecificTabWindow(1);//sample window
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user switches to a window with index 1");
         windowMethod.closeCurrentTabWindow();
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user closes window");
         windowMethod.switchSpecificTabWindow(0);//browser window
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user switches to window with index 0");
     }
 
     public void interactWithNewWindowMsgButton() {
 
         elementMethods.clickElem(newWindowMsgButton);
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user clicks on new window message button");
         windowMethod.switchSpecificTabWindow(1);//sample window
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user switches to a tab/window with index 1");
         windowMethod.closeCurrentTabWindow();
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user closes tab/window");
         windowMethod.switchSpecificTabWindow(0);//browser window
-        LoggerUtility.infoTest("The user switches to a tab with index 1");
+        LoggerUtility.infoTest("The user switches to a tab/window with index 0");
     }
 }
 

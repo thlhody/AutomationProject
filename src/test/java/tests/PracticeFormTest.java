@@ -6,7 +6,7 @@ import pages.FormsPage;
 import pages.HomePage;
 import pages.PracticeFormPage;
 import propertyUtility.PropertyUtility;
-import sharedData.SharedData;
+import sharedData.Hooks;
 
 
 public class PracticeFormTest extends Hooks {

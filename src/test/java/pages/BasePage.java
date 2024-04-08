@@ -1,6 +1,5 @@
 package pages;
 
-
 import helperMethods.*;
 
 import org.openqa.selenium.WebDriver;

@@ -26,36 +26,36 @@ public class AlertPage extends BasePage {
     public void acceptAlert() {
 
         elementMethods.clickElem(alertSimple);
-        LoggerUtility.infoTest("Click Alert Simple");
+        LoggerUtility.infoTest("User Click Alert Simple");
         alertMethods.acceptAlert();
-        LoggerUtility.infoTest("Accept Alert");
+        LoggerUtility.infoTest("User Accept Alert");
     }
 
     public void cancelAlert() {
 
         elementMethods.clickElem(confirmButton);
-        LoggerUtility.infoTest("Click Alert Ok/Cancel");
+        LoggerUtility.infoTest("User Click Alert Ok/Cancel");
         alertMethods.dismissAlert();
-        LoggerUtility.infoTest("Alert Dismiss Selected");
+        LoggerUtility.infoTest("User Alert Cancel Selected");
         elementMethods.validateElementText(confirmResult, "You selected Cancel");
-        LoggerUtility.infoTest("Validate Alert Dismiss");
+        LoggerUtility.infoTest("User Validate Alert Cancel");
     }
 
     public void alertTimerComplex() {
 
         elementMethods.clickElemForce(alertTimerComplex);
-        LoggerUtility.infoTest("Click Alert Timer");
+        LoggerUtility.infoTest("User Click Alert Timer");
         alertMethods.acceptAlert();
-        LoggerUtility.infoTest("Accept Alert");
+        LoggerUtility.infoTest("User Accept Alert");
     }
 
     public void promptSimple(String text) {
 
         elementMethods.clickElem(promptSimple);
-        LoggerUtility.infoTest("Click Alert Prompt");
+        LoggerUtility.infoTest("User Click Alert Prompt");
         alertMethods.fillAlert(text);
-        LoggerUtility.infoTest("Enter Alert: "+text);
+        LoggerUtility.infoTest("User Entered Alert: "+text);
         elementMethods.validateElementText(promptResult, "You entered " + text);
-        LoggerUtility.infoTest("Validate Prompt Alert: "+text);
+        LoggerUtility.infoTest("User Validate Prompt Alert: "+text);
     }
 }
