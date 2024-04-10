@@ -22,17 +22,17 @@ public class HomePage extends BasePage {
     public void navigateToAlertFrameWindowPage() {
         //elementMethods.clickElem(acceptCookies);
         elementMethods.clickElem(alertWindowFrameElem);
-        LoggerUtility.infoTest("User clicks on alert Window Frame");
+        LoggerUtility.infoTest("User clicks on Alert Frame Window");
     }
 
     public void navigateToFormsPage() {
         elementMethods.clickElem(practiceFormElement);
-        LoggerUtility.infoTest("User clicks Practice Form");
+        LoggerUtility.infoTest("User clicks Forms page");
     }
 
     public void navigateToElementPage() {
         elementMethods.clickElem(elementFileElement);
-        LoggerUtility.infoTest("User clicks on Alert Window Frame");
+        LoggerUtility.infoTest("User clicks on Elements");
     }
 }
 

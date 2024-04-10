@@ -3,7 +3,6 @@ package sharedData.browser;
 import org.openqa.selenium.WebDriver;
 import propertyUtility.PropertyUtility;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class BrowserFactory {
